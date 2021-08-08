@@ -22,7 +22,7 @@ public class WaterCalculator {
         return evaporateAndCalcAmount(water);
     }
 
-    protected final int[] calcMaxWaterLevels(int[] landscape, Map<Integer, Integer> localExtremes) {
+    private int[] calcMaxWaterLevels(int[] landscape, Map<Integer, Integer> localExtremes) {
         int[] water = new int[landscape.length];
         Integer[] extremeIndexList = localExtremes.keySet().toArray(new Integer[0]);
 
@@ -35,7 +35,7 @@ public class WaterCalculator {
         return water;
     }
 
-    protected final Map<Integer, Integer> calcLocalExtremes(int[] landscape) {
+    private Map<Integer, Integer> calcLocalExtremes(int[] landscape) {
         Map<Integer, Integer> localExtremes = new TreeMap<>();
 
         processLeftBorder(landscape, localExtremes);
